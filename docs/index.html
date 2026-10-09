@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouth String Artwork</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- The video is dimmed using CSS to make the text pop -->
+        <video id="webcam" autoplay playsinline></video>
+        <!-- The canvas handles all rendering (physics letters, ribbon) -->
+        <canvas id="output-canvas"></canvas>
+        
+        <!-- Text input for manual typing -->
+        <input type="text" id="word-input" placeholder="Type words here and press Enter..." autocomplete="off" />
+
+        <div id="ui-overlay">
+            <h1>Mouth String</h1>
+            <p>Please allow camera and microphone access.</p>
+            <p>1. Speak out loud and open your mouth to see your words fall.</p>
+            <p>2. Pinch near your mouth and pull to string your words.</p>
+            <button id="start-btn">Start Artwork</button>
+        </div>
+    </div>
+
+    <script type="module" src="speech.js?v=16"></script>
+    <script type="module" src="physics.js?v=16"></script>
+    <script type="module" src="tracker.js?v=16"></script>
+    <script type="module" src="renderer.js?v=16"></script>
+    <script type="module" src="main.js?v=16"></script>
+</body>
+</html>
